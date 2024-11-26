@@ -2,6 +2,17 @@ import { createLoadButton } from "./components/loadButton/loadButton";
 import { createSpinner } from "./components/spinner/spinner";
 
 
+
+const handleClick = () => {
+    alert("Botón pulsado");
+};
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const app = document.getElementById("app");
     const spinner = createSpinner();
@@ -10,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const app = document.getElementById("app");
-    const loadButton = createLoadButton();
-    app.appendChild(loadButton)
+    const loadBtn = createLoadButton();
+    app.appendChild(loadBtn)
+
+    loadBtn.addEventListener("click", handleClick)
 })
